@@ -167,9 +167,11 @@ void excluirElemento()
 	NO* ant = aux;
 	if (aux != NULL) {
 		aux = aux->prox;
+		cout << "Número excluído";
+		exibirQuantidadeElementos();
 	}
 	else {
-		cout << "Número não encontrado."
+		cout << "Número não encontrado.";
 	}
 
 
