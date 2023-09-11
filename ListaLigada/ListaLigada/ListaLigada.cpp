@@ -144,20 +144,23 @@ void inserirElemento()
 }
 
 void buscarElemento()
-{	
+{
 	int busca;
-	cout << "Digite o número que deseja buscar:";
+	cout << "Digite um valor para a busca:";
 	cin >> busca;
 	NO* aux = primeiro;
 	while (aux != NULL) {
 		if (aux->valor == busca)
 		{
+			cout << "Número encontrado. \n";
 			break;
 		}
 		aux = aux->prox;
 	}
+	if (aux == NULL) {
+		cout << "Número não encontrado. \n";
+	}
 }
-
 void excluirElemento()
 {
 	int excluir;
