@@ -166,18 +166,17 @@ void excluirElemento()
 	int excluir;
 	cout << "Digite o número que deseja excluir:";
 	cin >> excluir;
-	buscarElemento();
-	NO* ant = aux;
+	posicaoElemento(int excluir);
 	if (aux != NULL) {
+		NO* ant = aux;
 		aux = aux->prox;
+		free(ant);
 		cout << "Número excluído";
 		exibirQuantidadeElementos();
 	}
 	else {
 		cout << "Número não encontrado.";
 	}
-
-
 }
 
 // retorna um ponteiro para o elemento buscado
