@@ -31,3 +31,6 @@ Faça um fork deste repositorio e realize as seguintes atividades:
 * Se encontrado exclue o elemento e atualiza a quantidade de elementos na lista
 * Se não econtrado exibe "ELEMENTO NAO ENCONTRADO" 
 
+## Aluno
+Nome: Miguel Willians
+Email: miguel.oliveira12@fatec.sp.gov.br
