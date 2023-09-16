@@ -161,21 +161,30 @@ void buscarElemento()
 		cout << "Número não encontrado. \n";
 	}
 }
+
 void excluirElemento()
 {
 	int excluir;
 	cout << "Digite o número que deseja excluir:";
 	cin >> excluir;
-	posicaoElemento(int excluir);
-	if (aux != NULL) {
-		NO* ant = aux;
-		aux = aux->prox;
-		free(ant);
-		cout << "Número excluído";
-		exibirQuantidadeElementos();
+	NO* aux = primeiro;
+	while (aux != NULL) {
+		if (aux->prox->valor == excluir)
+		{
+			NO* ant = aux; // guarda o valor do anterior ao excluir
+			aux = aux->prox; // aux se torna o valor do excluir
+			ant->prox = aux->prox; // o ponteiro do anterior aponta para o próximo do excluir 
+			free(aux); // libera o excluir
+			cout << "Número excluído";
+			break;
+		}
+		else{
+			cout << "Número não encontrado. \n";
+			break;
+		}
 	}
-	else {
-		cout << "Número não encontrado.";
+	if (aux == NULL) {
+		cout << "Número não encontrado. \n";
 	}
 }
 
