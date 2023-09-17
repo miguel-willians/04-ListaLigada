@@ -149,7 +149,7 @@ void buscarElemento()
 	cout << "Digite um valor para a busca:";
 	cin >> busca;
 	NO* aux = primeiro;
-	while (aux != NULL) {
+	while (aux->prox != NULL) {
 		if (aux->valor == busca)
 		{
 			cout << "Número encontrado. \n";
